@@ -1,0 +1,182 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+main::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 150vh;
+    width: 150vh;
+    background: linear-gradient(
+    -233deg, black 30%, rgba(0, 0, 0, 0) 65%
+    ) no-repeat;
+    
+}
+
+
+main .personagem{
+    display: none;
+}
+
+main .personagem.selecionado{
+    display: block;
+    height: 100vh;
+}
+
+main .personagem .imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo{
+   
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+    align-items: center;
+}
+
+
+.conteudo .nome-personagem{
+
+    color: purple;
+    font-size: 50px;
+    font-family: "secular one";
+    font-weight: 400;
+    margin-bottom: 20px;
+    
+}
+
+.conteudo .descricao{
+   color: #ffffff;
+   font-family: "Rubik";
+   line-height: 24px;  
+}
+
+.conteudo .logo{
+    background-image: url("../imagens/one-piece-logo.png");
+    background-size: cover;
+    width: 230px;
+    height: 100px;
+    margin: bottom 35px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.botoes .botao{
+    transform: scale(1.2);
+    background-color:rgba(0, 0, 0, 0.5) ;
+    cursor: pointer;
+    color: #ffffff; 
+    font-size: larger;
+    padding: 10px;
+    border: solid 1px white;
+    border-radius: 5px;
+    
+    
+}
+
+.botoes .botao:hover{
+    border: none;
+    background: none;
+    cursor: pointer;
+    color:purple;
+    font-size:24px;
+    background-color:rgba(0, 0, 0, 0.5) ;
+    border: solid 2px purple;
+    border-radius: 5px;
+    
+    
+}
+
+
+.botoes .botao img {
+    border-radius: 50%;
+    
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+   
+   
+
+}
+
+.scroll-box {
+    width: 400px;  /* Largura do quadrado */
+    height: 785px; /* Altura do quadrado */
+    overflow-y: scroll; /* Habilita a rolagem vertical */
+    padding: 10px;
+    text-align: center;
+    /* Sombra ao redor do quadrado */
+    font-family: Arial, sans-serif; /* Fonte */
+    background-color: transparent; /* Cor de fundo */
+    color: white;
+    white-space: pre-line;
+    font-size: x-large;
+}
+.scroll-box::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+    background: transparent; /* Faz o fundo da barra de rolagem ficar transparente */
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Arredondamento do polegar */
+}
+
+.scroll-box::-webkit-scrollbar-track {
+    background-color: transparent; /* Oculta a trilha da barra de rolagem */
+}
+
+.music{
+
+width: 300px;
+height: 40px;
+border-radius: 10px; /* Bordas arredondadas */
+position: relative;
+bottom: 0px;
+
+}
+
+.music::-webkit-media-controls-panel {
+    background-color: purple; /* Troca o fundo do painel para azul claro */
+    border-radius: 9px;
+}
+
+.music::-webkit-media-controls-play-button,
+.music::-webkit-media-controls-volume-slider,
+.music::-webkit-media-controls-timeline {
+    filter: brightness(0) invert(1); /* Altera a cor dos controles para branco */
+}
+
+.some{
+    opacity: 0;
+}
